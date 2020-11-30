@@ -15,16 +15,19 @@ import { CSSTransition } from 'react-transition-group';
 
 function App() {
   return (
-    <Navbar>
-      <div className="title">{<LogoIcon/>}</div>
-      <NavItem icon={<CaretIcon/>}>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
-      <NavItem icon={<PlusIcon/>}/>
-      <NavItem icon={<BellIcon/>}/>
-      <NavItem icon={<MessengerIcon/>}/>
-
-    </Navbar>
+    <div>
+      <Navbar>
+        <div className="title">{<LogoIcon/>}</div>
+        <NavItem icon={<CaretIcon/>}>
+          <DropdownMenu></DropdownMenu>
+        </NavItem>
+        <NavItem icon={<PlusIcon/>}/>
+        <NavItem icon={<BellIcon/>}/>
+        <NavItem icon={<MessengerIcon/>}/>
+      </Navbar>
+      
+      <FooterMenu></FooterMenu>
+    </div>
   );
 }
 
@@ -135,6 +138,15 @@ function DropdownMenu() {
         
         </div>
       </CSSTransition>
+    </div>
+  );
+}
+
+function FooterMenu() {
+  return(
+    <div className="footer">
+      <div className="footer-social">Footer Social</div>
+      <div className="footer-info">Footer Info</div>
     </div>
   );
 }

@@ -25,8 +25,12 @@ function App() {
         <NavItem icon={<BellIcon/>}/>
         <NavItem icon={<MessengerIcon/>}/>
       </Navbar>
-      
-      <FooterMenu></FooterMenu>
+      <div className="content-placeholder"></div>
+      <FooterMenu>
+        <NavItem icon={<PlusIcon/>} title={"Twitter"}/>
+        <NavItem icon={<BellIcon/>} title={"Facebook"}/>
+        <NavItem icon={<MessengerIcon/>} title={"GitHub"}/>
+      </FooterMenu>
     </div>
   );
 }
@@ -48,7 +52,7 @@ function NavItem(props) {
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>
-
+        {props.title}
       {open && props.children}
     </li>
   );
@@ -142,11 +146,25 @@ function DropdownMenu() {
   );
 }
 
-function FooterMenu() {
+function FooterMenu(props) {
   return(
     <div className="footer">
-      <div className="footer-social">Footer Social</div>
-      <div className="footer-info">Footer Info</div>
+      <div className="footer-social">
+        <h1>Footer Social</h1>
+        <ul>
+          { props.children } 
+        </ul>
+      </div>
+      <div className="footer-info">
+        <h1>Footer Info</h1>
+        <ul>
+          <li className = "footer-title">Company Name</li>
+          <li>12345 Address St</li>
+          <li>Address City, State, Zip</li>
+          <li>1-800-urphone</li>
+          <li>contactemail@company.com</li>
+        </ul>
+      </div>
     </div>
   );
 }

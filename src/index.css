@@ -190,3 +190,40 @@ span svg{
   transform: translateX(110%);
   transition: all var(--speed) ease;
 }
+
+/* Footer Component */
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: var(--text-color);
+  background-color: var(--bg);
+  padding-bottom: 50px;
+}
+
+.footer .nav-item{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.footer .nav-item a {
+  margin-right: 40px;
+}
+
+.footer-info{
+  line-height: 35px;
+}
+
+.footer-title{
+  font-weight: bold;
+}
+
+/* Temporary */
+
+.content-placeholder{
+  background-color: var(--bg-accent);
+  height: 300px;
+  width: 100%;
+}

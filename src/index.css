@@ -206,6 +206,7 @@ span svg{
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .footer .nav-item a {
